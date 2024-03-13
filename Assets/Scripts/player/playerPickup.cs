@@ -41,6 +41,7 @@ public class playerPickup : MonoBehaviour
                 if (currentPickupRb != null)
                 {
                     // currentPickupRb.isKinematic = true;
+                    currentPickupRb.constraints = RigidbodyConstraints.None;
                 }
 
                 // Attach the pickup to the attachPoint

@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Seaweed-farming.sln"
+    "dotnet.defaultSolution": "Seaweed farming.sln"
 }
