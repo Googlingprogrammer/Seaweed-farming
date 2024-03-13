@@ -40,7 +40,7 @@ public class playerPickup : MonoBehaviour
                 currentPickupRb = currentPickup.GetComponent<Rigidbody>();
                 if (currentPickupRb != null)
                 {
-                    currentPickupRb.isKinematic = true;
+                    // currentPickupRb.isKinematic = true;
                 }
 
                 // Attach the pickup to the attachPoint
@@ -59,7 +59,7 @@ public class playerPickup : MonoBehaviour
         // Re-enable physics for the dropped object
         if (currentPickupRb != null)
         {
-            currentPickupRb.isKinematic = false;
+            // currentPickupRb.isKinematic = false;
         }
 
         // Reset the current pickup variable
