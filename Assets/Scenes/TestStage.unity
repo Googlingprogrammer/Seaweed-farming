@@ -1427,7 +1427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823fe6c57fd76c74aa4b283c7705c47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winCon: 1
+  winCon: 5
   victoryText: WOOHOO!
   seaweedCollector: {fileID: 2053972856}
   textField: {fileID: 982036170}
