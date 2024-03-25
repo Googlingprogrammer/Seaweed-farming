@@ -394,7 +394,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &89813877
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -491,7 +491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &179754792
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &203317127
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -669,6 +669,8 @@ GameObject:
   - component: {fileID: 311481960}
   - component: {fileID: 311481959}
   - component: {fileID: 311481961}
+  - component: {fileID: 311481962}
+  - component: {fileID: 311481963}
   m_Layer: 0
   m_Name: ScriptRunner Guy
   m_TagString: Untagged
@@ -690,9 +692,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 4571456388095512305, guid: 0838f595c09e7e84ea57f5af62e44672, type: 3}
   numberOfInstances: 10
-  xRange: {x: 10, y: 190}
-  yValue: 20
-  zRange: {x: 10, y: 190}
+  xRange: {x: 10, y: 100}
+  yValue: 10
+  zRange: {x: 10, y: 100}
 --- !u!4 &311481960
 Transform:
   m_ObjectHideFlags: 0
@@ -721,10 +723,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4624769604661842546, guid: 7b9d40e27e83f7a4e9083186b049f318, type: 3}
-  numberOfInstances: 100
-  xRange: {x: 10, y: 190}
+  numberOfInstances: 50
+  xRange: {x: 10, y: 100}
   yValue: 25
-  zRange: {x: 10, y: 190}
+  zRange: {x: 10, y: 100}
+--- !u!114 &311481962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311481958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ea058cf27c0704daf0fd6b46e0eeef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8088170212371236773, guid: 43647e36ff077ac40aa0b9adaa15e276, type: 3}
+  numberOfInstances: 10
+  xRange: {x: 10, y: 100}
+  yValue: 40
+  zRange: {x: 10, y: 100}
+--- !u!114 &311481963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311481958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ea058cf27c0704daf0fd6b46e0eeef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4007008649345834459, guid: 9c727b328515c04459f421545a769fd9, type: 3}
+  numberOfInstances: 10
+  xRange: {x: 10, y: 100}
+  yValue: 0
+  zRange: {x: 10, y: 100}
 --- !u!1 &341442766
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &341442767
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -979,7 +1015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &678027918
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -1218,6 +1254,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1717751029704259873, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
+      propertyPath: detectionRadius
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1717751029704259873, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
+      propertyPath: fishLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 2204808416171688000, guid: 99a5768928e218e489203c7fac3deabf, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1545,7 +1589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &1187871359
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -1742,7 +1786,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &1242188490
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -2481,7 +2525,7 @@ GameObject:
   - component: {fileID: 2053972852}
   - component: {fileID: 2053972856}
   m_Layer: 0
-  m_Name: Collection
+  m_Name: Collection_SiLO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2569,7 +2613,7 @@ Transform:
   m_GameObject: {fileID: 2053972851}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 129.1, y: 32.70446, z: 149.17}
+  m_LocalPosition: {x: 45.6, y: 32.70446, z: 149.17}
   m_LocalScale: {x: 22.807072, y: 22.807072, z: 22.807072}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2750,7 +2794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &2068250167
 TerrainCollider:
   m_ObjectHideFlags: 0

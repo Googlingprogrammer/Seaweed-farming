@@ -8,6 +8,7 @@ TagManager:
   - Seaweed
   - Interactable
   - New tag
+  - LeFishe
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - UI
   - Pickupable
   - Interactable
-  - 
+  - fishLayer
   - 
   - 
   - 

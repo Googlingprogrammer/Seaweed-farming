@@ -12,10 +12,21 @@ public class FishMovement : MonoBehaviour
     private float switchDirectionTimer; // Timer to switch direction
     private float moveTimer; // Timer for moving in the current direction
 
+    private Renderer fishRenderer; // Renderer component of the fish
+    private Material originalMaterial;
+
+     public Material runawayMaterial; // The material to apply while fish are running away
+
     void Start()
     {
         // Start the movement coroutine
         StartCoroutine(MoveCoroutine());
+
+        // Get the Renderer component of the fish
+        fishRenderer = GetComponentInChildren<Renderer>();
+
+        // Store the original material
+        originalMaterial = fishRenderer.material;
     }
 
     IEnumerator MoveCoroutine()
@@ -62,5 +73,39 @@ public class FishMovement : MonoBehaviour
         {
             StartCoroutine(MoveCoroutine());
         }
+    }
+
+    public void FishRunAway(Vector3 playerPosition)
+    {
+        Debug.Log("AHH!");
+
+        fishRenderer.material = runawayMaterial;//change fish material
+
+        StartCoroutine(RunawayCoroutine(playerPosition));
+    }
+     IEnumerator RunawayCoroutine(Vector3 playerPosition)
+    {
+        // Calculate direction away from the player
+        Vector3 runDirection = transform.position - playerPosition;
+        runDirection.y = 0f; // Ensure the fish stays at the same height
+
+        // Normalize the direction to get a consistent speed
+        runDirection.Normalize();
+
+        float elapsedTime = 0f;
+
+        // Move away from the player for 2 seconds
+        while (elapsedTime < 5f)
+        {
+            // Move in the current direction
+            transform.Translate(runDirection * speed * Time.deltaTime, Space.World);
+
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
+
+        // Revert back to the original material
+        fishRenderer.material = originalMaterial;
     }
 }

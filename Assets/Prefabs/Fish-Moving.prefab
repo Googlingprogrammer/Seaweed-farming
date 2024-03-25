@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2634047225581662716}
   - component: {fileID: 8440669204791385881}
   - component: {fileID: 3968533430339712904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fish-Moving
-  m_TagString: Untagged
+  m_TagString: LeFishe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,6 +67,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37e49108dfd57246892740d8b53ae29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+  switchDirectionTimeMin: 1
+  switchDirectionTimeMax: 2
+  runawayMaterial: {fileID: 2100000, guid: e39b4b927a02414439834ec6bbbc1302, type: 2}
 --- !u!1001 &4693869155315450996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -122,6 +126,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d8e9b1e3b2af9da4f932df78fbaf4919, type: 3}
       propertyPath: m_Name
       value: fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d8e9b1e3b2af9da4f932df78fbaf4919, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
