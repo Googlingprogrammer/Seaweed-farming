@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class playerPickup : MonoBehaviour
 {
-    public string pickupableTag = "Pickupable";
     public Transform attachPoint;
+    public GameObject prefabToSpawn;
 
     private GameObject currentPickup;
     private Rigidbody currentPickupRb;
@@ -31,7 +31,19 @@ public class playerPickup : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, pickupRange))
         {
-            if (hit.collider.CompareTag(pickupableTag))
+            // Check if the hit object is on the layer "destroyOnPickup"
+            if (hit.collider.gameObject.layer == LayerMask.NameToLayer("destroyOnPickup"))
+            {
+                // Destroy the hit object
+                Destroy(hit.collider.gameObject);
+
+                // Instantiate the prefab at the attachPoint
+                if (prefabToSpawn != null && attachPoint != null)
+                {
+                    Instantiate(prefabToSpawn, attachPoint.position, attachPoint.rotation, attachPoint);
+                }
+            }
+            else
             {
                 // Set the current pickup to the hit object
                 currentPickup = hit.collider.gameObject;
