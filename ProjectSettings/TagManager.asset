@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - New tag
   - LeFishe
+  - WinCon
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Pickupable
   - Interactable
   - fishLayer
-  - 
+  - destroyOnPickup
   - 
   - 
   - 
