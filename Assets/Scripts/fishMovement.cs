@@ -53,6 +53,13 @@ public class FishMovement : MonoBehaviour
                 // Move in the current direction
                 transform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
 
+                //fish stay above y 10
+
+                if (transform.position.y < 10f)
+                {
+                    transform.position = new Vector3(transform.position.x, 10f, transform.position.z);
+                }
+
                 // Decrease move timer
                 moveTimer -= Time.deltaTime;
 
