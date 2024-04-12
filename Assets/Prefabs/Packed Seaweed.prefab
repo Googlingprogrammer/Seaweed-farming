@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1451287036166086849}
   - component: {fileID: 3986837451861537495}
   - component: {fileID: 1887816345863067161}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Packed Seaweed
   m_TagString: WinCon
   m_Icon: {fileID: 0}
@@ -164,6 +164,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2c6a9d7085a78b249abc6fa241422d9d, type: 3}
       propertyPath: m_Name
       value: kelpcube
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2c6a9d7085a78b249abc6fa241422d9d, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -22,7 +22,7 @@ TagManager:
   - fishLayer
   - destroyOnPickup
   - No_Caustic
-  - 
+  - IgnoreCollision
   - 
   - 
   - 

@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class fpsCameraControl : MonoBehaviour
 {
-    public float mouseSensitivity = 70f;
+    // public float mouseSensitivity = 70f;
+    public float sensitivity = 1.25f;
+    
 
     public Transform player;
 
-    float xRotation = 0f;
+    // float xRotation = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +21,14 @@ public class fpsCameraControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float x = Input.GetAxis("Horizontal") * sensitivity;
+        // float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         // float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
         // xRotation -= mouseY;
         // xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         // transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        player.Rotate(Vector3.up * mouseX);
+        player.Rotate(Vector3.up * x);
     }
 }
