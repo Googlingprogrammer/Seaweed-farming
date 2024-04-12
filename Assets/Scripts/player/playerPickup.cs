@@ -11,7 +11,7 @@ public class playerPickup : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             // Check if the player is not already carrying an object
             if (currentPickup == null)
@@ -20,7 +20,7 @@ public class playerPickup : MonoBehaviour
             }
             else
             {
-                DropObject();
+                // DropObject();
             }
         }
     }
@@ -43,7 +43,7 @@ public class playerPickup : MonoBehaviour
                     Instantiate(prefabToSpawn, attachPoint.position, attachPoint.rotation, attachPoint);
                 }
             }
-            else
+            else if (hit.collider.gameObject.layer != LayerMask.NameToLayer("Default"))
             {
                 // Set the current pickup to the hit object
                 currentPickup = hit.collider.gameObject;

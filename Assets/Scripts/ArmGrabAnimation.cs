@@ -13,7 +13,7 @@ public class AnimationController : MonoBehaviour
     void Update()
     {
         // Check if the "E" key is pressed
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.J))
         {
             Debug.Log("test");
             // Trigger the animation

@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController controller;
-    public float walkSpeed = 12f;
-    public float runSpeed = 24f; // Double the walk speed for running
+    public float walkSpeed = 24f;
+    public float runSpeed = 48f; // Double the walk speed for running
     // public float jumpHeight = 3f;
     // public float gravity = 9.8f;
 
@@ -14,9 +14,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
+        // float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
-        float y = 0f;
+        // float y = 0f;
         
         // if (Input.GetKey(KeyCode.Space))
         // {
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         //     y = -1.0f; // Going down
         // }
 
-        Vector3 move = transform.right * x + transform.forward * z + transform.up * y;
+        Vector3 move = transform.forward * z;
 
         // Check if the player is holding the "Shift" key to run
         float currentSpeed = Input.GetKey(KeyCode.LeftShift) ? runSpeed : walkSpeed;

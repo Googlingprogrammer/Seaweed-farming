@@ -55,8 +55,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.1502829, y: 27.201782, z: 1.1886401}
-  m_Center: {x: 0.1275363, y: 12.20171, z: -0.09432003}
+  m_Size: {x: 11.6991205, y: 27.201782, z: 1.1886401}
+  m_Center: {x: 0.27671957, y: 12.20171, z: -0.09432006}
 --- !u!114 &2352599667017873958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,6 +228,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 6504cc156a76f79458dffd73db914da0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ddce3af05aedf441978ed6039c2f719, type: 2}
     - target: {fileID: 919132149155446097, guid: 6504cc156a76f79458dffd73db914da0, type: 3}
       propertyPath: m_Name
       value: kelp
