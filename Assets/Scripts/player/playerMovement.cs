@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         float y = 0f;
-
+        
         // if (Input.GetKey(KeyCode.Space))
         // {
         //     y = 1.0f; // Going up
