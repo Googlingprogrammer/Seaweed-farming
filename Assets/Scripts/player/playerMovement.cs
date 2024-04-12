@@ -18,14 +18,14 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
         float y = 0f;
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            y = 1.0f; // Going up
-        }
-        else if (Input.GetKey(KeyCode.LeftControl))
-        {
-            y = -1.0f; // Going down
-        }
+        // if (Input.GetKey(KeyCode.Space))
+        // {
+        //     y = 1.0f; // Going up
+        // }
+        // else if (Input.GetKey(KeyCode.LeftControl))
+        // {
+        //     y = -1.0f; // Going down
+        // }
 
         Vector3 move = transform.right * x + transform.forward * z + transform.up * y;
 
