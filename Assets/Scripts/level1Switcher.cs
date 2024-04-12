@@ -36,7 +36,7 @@ public class LevelSwitcher : MonoBehaviour
     IEnumerator SwitchLevelAfterDelay()
     {
         // Wait for 5 seconds
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
 
         // Load the new level
         SceneManager.LoadScene(newLevelName);

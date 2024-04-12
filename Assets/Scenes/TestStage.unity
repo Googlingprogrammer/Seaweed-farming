@@ -1338,6 +1338,7 @@ GameObject:
   - component: {fileID: 311481959}
   - component: {fileID: 311481961}
   - component: {fileID: 311481962}
+  - component: {fileID: 311481963}
   m_Layer: 0
   m_Name: ScriptRunner Guy
   m_TagString: Untagged
@@ -1408,6 +1409,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBoxGameObject: {fileID: 977293257}
   newText: Harvest the glowing kelp!
+--- !u!114 &311481963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311481958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7373576abdfbdb14a970612153932a08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newLevelName: Cutscene
+  seaweedCollectorObject: {fileID: 2053972851}
 --- !u!1 &341442766
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,7 +2262,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.6e-43, y: 0, z: 0, w: 8.670254e-37}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 3e-45, z: 1.2368e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2365,7 +2380,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6e-44, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: -1.698154e+29, z: 4.71e-43, w: 1.37e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2811,7 +2826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winCon: 5
-  victoryText: WOOHOO!
+  victoryText: QUOTA FULLFILLED
   seaweedCollector: {fileID: 2053972856}
   textField: {fileID: 982036170}
 --- !u!114 &982036170
