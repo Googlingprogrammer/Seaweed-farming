@@ -15,8 +15,9 @@ public class AnimationController : MonoBehaviour
         // Check if the "E" key is pressed
         if (Input.GetKeyDown(KeyCode.E))
         {
+            Debug.Log("test");
             // Trigger the animation
-            animator.SetTrigger("roboarm_grab|Armature_001Actions");
+            animator.SetTrigger("Active");
         }
     }
 }
