@@ -8,14 +8,17 @@ public class playerPickup : MonoBehaviour
     public Transform attachPoint;
     public GameObject prefabToSpawn;
     public GameObject enableAfter5Seconds;
+    public GameObject SonarDisc;
     public AudioSource honkSound;
 
     private GameObject currentPickup;
     private Rigidbody currentPickupRb;
+    private bool isEnlarging = false; // Flag to track if the SonarDisc is currently enlarging
     public float pickupRange = 10f;
 
     public GameObject textBoxGameObject; // Reference to the GameObject containing the script with the textToDisplay variable
     public string newText = "Honk to shoo away fishes";
+    
 
     void Update()
     {
@@ -105,7 +108,7 @@ public class playerPickup : MonoBehaviour
         playerMovement.walkSpeed = 0f;
     }
 }
-    public void HonkFishes()
+public void HonkFishes()
 {
     if (enableAfter5Seconds != null)
     {
@@ -125,11 +128,57 @@ public class playerPickup : MonoBehaviour
     {
         honkSound.Play();
     }
-        // Set the textToDisplay variable to the desired value
-        newText = "";
-        ModifyTextToDisplay();
-    
+
+    // Set the textToDisplay variable to the desired value
+    newText = "";
+    ModifyTextToDisplay();
+
+    if (!isEnlarging)
+    {
+        StartCoroutine(EnlargeSonarDisc());
+    }
 }
+IEnumerator EnlargeSonarDisc()
+{
+    isEnlarging = true;
+    Vector3 originalScale = SonarDisc.transform.localScale;
+    Vector3 targetScale = originalScale * 1.5f; // Scale to 1.5 times the original size
+    float duration = 0.2f; // Adjust duration as needed
+
+    float timer = 0f;
+
+    while (timer < duration)
+    {
+        float t = timer / duration;
+        SonarDisc.transform.localScale = Vector3.Lerp(originalScale, targetScale, t);
+        timer += Time.deltaTime;
+        yield return null;
+    }
+
+    // Ensure final scale is exactly the target scale
+    SonarDisc.transform.localScale = targetScale;
+
+    // Wait for a short delay (if needed)
+    yield return new WaitForSeconds(0.1f);
+
+    // Shrink back to the original size
+    timer = 0f;
+    while (timer < duration)
+    {
+        float t = timer / duration;
+        SonarDisc.transform.localScale = Vector3.Lerp(targetScale, originalScale, t);
+        timer += Time.deltaTime;
+        yield return null;
+    }
+
+    // Ensure final scale is exactly the original scale
+    SonarDisc.transform.localScale = originalScale;
+
+    isEnlarging = false;
+}
+
+
+
     private void ModifyTextToDisplay()
     {
         // Check if the reference to the GameObject is assigned

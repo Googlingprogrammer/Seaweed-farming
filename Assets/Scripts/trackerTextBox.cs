@@ -10,7 +10,7 @@ public class trackerTextBox : MonoBehaviour
     {
         if (seaweedCollector != null && textField != null)
         {
-            textField.text = "Seaweed Collected: " + seaweedCollector.seaweedCollected + "/5"; // Update the text with the value of seaweedCollected
+            textField.text = seaweedCollector.seaweedCollected + "/5"; // Update the text with the value of seaweedCollected
         }
     }
 }
